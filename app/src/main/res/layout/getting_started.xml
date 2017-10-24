@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        ></include>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textView"
+        android:typeface="serif"
+        android:textSize="30sp"
+        android:text="1. CREATE A GROUP.  \n\n2. ASK YOUR FRIENDS TO JOIN.\n\n3. SHARE LOCATION AND CHAT."
+        android:textColor="@color/colorPrimary"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/btnStarted"
+        android:paddingTop="10dp"
+        android:gravity="center_vertical|center"
+        android:layout_below="@+id/tool_bar"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="normal|bold"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET STARTED"
+        android:id="@+id/btnStarted"
+        android:theme="@style/Widget.AppCompat.Button.Colored"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

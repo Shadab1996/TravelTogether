@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.stinkinsweet.traveltogether.travel_room"
+    android:background="#2d2d2d">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        ></include>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tool_bar"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/txtInternet"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/txtInternet"
+        android:id="@+id/layoutLand">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+             >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Join an existing group"
+                android:id="@+id/txtTravelRoom"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:gravity="center_horizontal"
+                android:nestedScrollingEnabled="false"
+                android:layout_below="@+id/tool_bar"
+                android:layout_alignStart="@+id/listRooms"
+                android:layout_alignEnd="@+id/listRooms"
+                android:layout_marginTop="5dp" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/listRooms"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_below="@+id/txtTravelRoom"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_above="@+id/txtInternet" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="3dp"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Add a new group?"
+                android:id="@+id/txtAddRoom"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#ffffff"
+                android:gravity="center_horizontal"
+                android:nestedScrollingEnabled="false"
+                android:layout_above="@+id/txtRooms"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="0.00"
+                android:layout_marginTop="5dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/txtRooms"
+                android:hint="New Group Name?"
+
+                android:paddingLeft="10dp"
+                android:background="@drawable/round_edit_text"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_above="@+id/txtPass"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.00"
+                android:layout_height="40dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:id="@+id/txtPass"
+                android:hint="Password"
+                android:background="@drawable/round_edit_text"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_above="@+id/btnAdd"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="15dp" />
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Room"
+                android:id="@+id/btnAdd"
+                android:onClick="addRoom"
+                android:layout_marginLeft="5dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_marginRight="5dp"
+                android:layout_above="@+id/adView"
+                android:layout_marginTop="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimary"
+android:layout_below="@id/layoutLand"
+        />
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/txtInternet"
+        android:layout_alignParentStart="true">
+    </com.google.android.gms.ads.AdView>
+
+
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/txtInternet"
+        android:gravity="center_horizontal"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        android:textIsSelectable="false"
+        android:visibility="visible"
+
+        android:layout_width="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_alignParentStart="true"
+        android:layout_height="20dp" />
+
+</RelativeLayout>

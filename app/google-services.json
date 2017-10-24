@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "700545134773",
+    "firebase_url": "https://travel-together-57b12.firebaseio.com",
+    "project_id": "travel-together-57b12",
+    "storage_bucket": "travel-together-57b12.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:700545134773:android:df491c6912abf818",
+        "android_client_info": {
+          "package_name": "com.stinkinsweet.traveltogether"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "700545134773-r87hv5fm83p4q00sck12lhfdop5atbtk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAElX6Qm1GkC2Ew4EDrQPkTJkaFVTmKx9I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

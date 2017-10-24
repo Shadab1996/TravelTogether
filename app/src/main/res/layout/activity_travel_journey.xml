@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d2202207">
+
+    <fragment
+        android:layout_width="fill_parent"
+        android:layout_height="275dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/tableForButtons" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/txtSend"
+        android:paddingLeft="10dp"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/round_edit_text"
+        android:hint="Type a message"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/btnMapView"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/txtChatArea"
+        android:maxLines = "30"
+        android:scrollbars = "vertical"
+        android:textSize="18dp"
+        android:textStyle="italic"
+        android:background="#00000000"
+
+        android:hint="Tap on above button for location\n\n\n\nChat here\n"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/txtSend"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="bottom"
+        android:paddingLeft="10dp" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/tableForButtons"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/txtChatArea"
+        android:background="#00000000"
+        android:padding="5dp"></TableLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMapView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:scaleType="fitXY"
+        android:background="#49ffffff"
+        android:onClick="showMapViewOptions"
+        android:src="@drawable/map_view"
+        android:layout_marginRight="5dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSend"
+        android:layout_alignTop="@+id/txtSend"
+        android:layout_alignBottom="@+id/txtSend"
+        android:layout_alignEnd="@+id/btnMapView"
+        android:src="@drawable/arrow"
+        android:background="#00ffffff"
+        android:layout_toEndOf="@+id/txtSend"
+        android:onClick="sendMessage"
+        android:scaleType="fitXY" />
+
+</RelativeLayout>

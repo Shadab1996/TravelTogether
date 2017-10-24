@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        ></include>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView2"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+    </com.google.android.gms.ads.AdView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/txtYourRoom"
+        android:textSize="35dp"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:nestedScrollingEnabled="false"
+        android:text="Your Group"
+        android:layout_below="@+id/tool_bar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/txtJoin"
+        android:textSize="20dp"
+        android:paddingLeft="10dp"
+        android:layout_below="@+id/txtYourRoom"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentEnd="true" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:id="@+id/listFriends"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtJoin"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/btnStart" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Room"
+        android:id="@+id/button5"
+        android:onClick="addRoom"
+        android:layout_marginLeft="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/adView"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Room"
+        android:id="@+id/button4"
+        android:onClick="addRoom"
+        android:layout_marginLeft="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/adView"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Room"
+        android:id="@+id/button3"
+        android:onClick="addRoom"
+        android:layout_marginLeft="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/adView"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Room"
+        android:id="@+id/button2"
+        android:onClick="addRoom"
+        android:layout_marginLeft="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/adView"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Journey"
+        android:id="@+id/btnStart"
+        android:onClick="startJourney"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_above="@+id/adView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+</RelativeLayout>

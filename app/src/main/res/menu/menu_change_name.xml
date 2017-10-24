@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/feedback"
+        android:orderInCategory="100"
+        android:title="Send feedback?"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/nameChange"
+        android:orderInCategory="100"
+        android:title="Change Name"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/instructions"
+        android:orderInCategory="100"
+        android:title="Help"
+        app:showAsAction="never"/>
+
+</menu>
